@@ -1,0 +1,17 @@
+0. Only english!
+
+1. Variable and methodes names:
+	camelCase
+
+2. Class names:
+	PascalCase
+
+3. Single Tab on new line
+
+4. One person - One branch
+
+5. Comments for each function and class - SHORT! (Check how it works in C#)
+
+6. Research localisation - (Start with english)
+
+7. Resolution - Check
