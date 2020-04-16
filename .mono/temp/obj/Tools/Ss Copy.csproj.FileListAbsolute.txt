@@ -1,0 +1,6 @@
+E:\Godot\Projekty\SSC\SSCopy\.mono\temp\bin\Tools\Ss Copy.dll
+E:\Godot\Projekty\SSC\SSCopy\.mono\temp\bin\Tools\Ss Copy.pdb
+E:\Godot\Projekty\SSC\SSCopy\.mono\temp\obj\Tools\Ss Copy.csprojAssemblyReference.cache
+E:\Godot\Projekty\SSC\SSCopy\.mono\temp\obj\Tools\Ss Copy.csproj.CoreCompileInputs.cache
+E:\Godot\Projekty\SSC\SSCopy\.mono\temp\obj\Tools\Ss Copy.dll
+E:\Godot\Projekty\SSC\SSCopy\.mono\temp\obj\Tools\Ss Copy.pdb
