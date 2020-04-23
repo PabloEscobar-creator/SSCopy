@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/ButtonTextures/active.png" type="Texture" id=1]
 [ext_resource path="res://assets/ButtonTextures/inactive.png" type="Texture" id=2]
@@ -7,12 +7,15 @@
 [ext_resource path="res://src/menus/SettingsButton.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/menus/PlayButton.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/menus/SettingsButton.cs" type="Script" id=7]
+[ext_resource path="res://src/menus/PlayButton.cs" type="Script" id=8]
+[ext_resource path="res://src/menus/ExitButton.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/menus/ExitButton.cs" type="Script" id=10]
 
 [node name="TitleScreen" type="MarginContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 120.0
-margin_top = 120.0
+margin_top = 80.0
 margin_right = -120.0
 margin_bottom = -80.0
 __meta__ = {
@@ -21,7 +24,7 @@ __meta__ = {
 
 [node name="ColumnContainer" type="VBoxContainer" parent="."]
 margin_right = 1680.0
-margin_bottom = 880.0
+margin_bottom = 920.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 30
@@ -37,6 +40,7 @@ stretch_mode = 2
 margin_top = 270.0
 margin_bottom = 390.0
 expand = true
+script = ExtResource( 8 )
 
 [node name="SettingsButton" parent="ColumnContainer" instance=ExtResource( 5 )]
 margin_top = 420.0
@@ -44,10 +48,16 @@ margin_bottom = 540.0
 expand = true
 script = ExtResource( 7 )
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ColumnContainer"]
+[node name="ExitButton" parent="ColumnContainer" instance=ExtResource( 9 )]
 margin_top = 570.0
+margin_bottom = 690.0
+expand = true
+script = ExtResource( 10 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColumnContainer"]
+margin_top = 720.0
 margin_right = 1680.0
-margin_bottom = 630.0
+margin_bottom = 780.0
 alignment = 2
 
 [node name="MuteEffectsButton" type="TextureButton" parent="ColumnContainer/HBoxContainer"]
@@ -65,13 +75,15 @@ texture_normal = ExtResource( 2 )
 texture_hover = ExtResource( 1 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="ColumnContainer"]
-margin_top = 660.0
+margin_top = 810.0
 margin_right = 1680.0
-margin_bottom = 880.0
+margin_bottom = 920.0
 size_flags_vertical = 3
 custom_fonts/normal_font = ExtResource( 4 )
 text = "
 SS Copy
 Ver. 0.0.1
 All Rights Reserved"
+[connection signal="pressed" from="ColumnContainer/PlayButton" to="ColumnContainer/PlayButton" method="OnPlayButtonPressed"]
 [connection signal="pressed" from="ColumnContainer/SettingsButton" to="ColumnContainer/SettingsButton" method="OnSettingsButtonPressed"]
+[connection signal="pressed" from="ColumnContainer/ExitButton" to="ColumnContainer/ExitButton" method="OnExitButtonPressed"]
